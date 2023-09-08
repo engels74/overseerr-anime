@@ -8,5 +8,15 @@
       "nightly-c484810f965f8d04643c25c6d283dd83f4bd4a23",
       "nightly-2900da9"
     ]
+  },
+  "release": {
+    "description": "Releases",
+    "last_updated": "2023-09-08T06:23:41.664Z",
+    "latest": true,
+    "tags": [
+      "release",
+      "release-1.33.2",
+      "release-4e768f7"
+    ]
   }
 }
