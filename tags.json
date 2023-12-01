@@ -11,12 +11,12 @@
   },
   "release": {
     "description": "Releases",
-    "last_updated": "2023-09-29T01:49:15.162Z",
+    "last_updated": "2023-12-01T02:51:28.669Z",
     "latest": true,
     "tags": [
       "release",
       "release-1.33.2",
-      "release-8b571e5"
+      "release-10824f9"
     ]
   }
 }
