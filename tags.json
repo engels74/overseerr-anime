@@ -2,13 +2,13 @@
   "nightly": {
     "description": "Every commit to develop",
     "hide": false,
-    "last_updated": "2024-02-17T17:46:58.000Z",
-    "last_updated_url": "https://github.com/hotio/overseerr/actions/runs/7943260397",
+    "last_updated": "2024-02-17T23:47:58.000Z",
+    "last_updated_url": "https://github.com/hotio/overseerr/actions/runs/7944983253",
     "latest": false,
     "tags": [
       "nightly",
       "nightly-2dd00481c2df969731e8215865f662bce771489d",
-      "nightly-da41ab5"
+      "nightly-44457fa"
     ]
   },
   "release": {
