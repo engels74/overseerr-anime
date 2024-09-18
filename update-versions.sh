@@ -1,5 +1,5 @@
 #!/bin/bash
-version=$(curl -u "${GITHUB_ACTOR}:${GITHUB_TOKEN}" -fsSL "https://api.github.com/repos/sct/overseerr/tags" | jq -re .[0].name) || exit 1
+version=$(curl -u "${GITHUB_ACTOR}:${GITHUB_TOKEN}" -fsSL "https://api.github.com/repos/engels74/overseerr-anime-source/tags" | jq -re .[0].name) || exit 1
 [[ -z ${version} ]] && exit 0
 [[ ${version} == null ]] && exit 0
 json=$(cat VERSION.json)
