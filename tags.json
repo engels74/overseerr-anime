@@ -2,13 +2,13 @@
   "release": {
     "description": "Releases",
     "hide": false,
-    "last_updated": "2024-09-07T01:03:09.000Z",
-    "last_updated_url": "https://github.com/hotio/overseerr/actions/runs/10747188377",
+    "last_updated": "2024-09-18T19:10:38.000Z",
+    "last_updated_url": "https://github.com/engels74/overseerr-anime/actions/runs/10927910311",
     "latest": true,
     "tags": [
       "release",
-      "release-1.33.2",
-      "release-d6f0056"
+      "release-1.33.2-anime",
+      "release-e54fc57"
     ]
   }
 }
