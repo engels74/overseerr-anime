@@ -3,6 +3,10 @@
     {
         "name": "Upstream Project",
         "url": "https://github.com/sct/overseerr"
+    },
+    {
+        "name": "Pull Request: #3664",
+        "url": "https://github.com/sct/overseerr/pull/3664"
     }
 ]
 }
