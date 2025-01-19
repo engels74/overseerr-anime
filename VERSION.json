@@ -5,7 +5,7 @@
   "test_url": "http://localhost:5055",
   "upstream_digest_amd64": "sha256:621e183c65321e326556f9fe6dd4e7c02203df3073d3fa007643b269b877ab42",
   "upstream_digest_arm64": "sha256:cf01084098933814dda7dcb3adfee843305c3c5b158823fa35c50de3d8cc408b",
-  "upstream_image": "ghcr.io/hotio/base",
+  "upstream_image": "ghcr.io/engels74/base-image",
   "upstream_tag": "alpinevpn",
   "version": "3242251927be251fa528bf9811f9aeabc7249605"
 }
