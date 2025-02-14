@@ -2,13 +2,13 @@
   "nightly": {
     "description": "Every commit to develop",
     "hide": false,
-    "last_updated": "2025-01-19T14:23:36.000Z",
-    "last_updated_url": "https://github.com/engels74/overseerr-anime/actions/runs/12854066747",
+    "last_updated": "2025-02-14T21:14:05.000Z",
+    "last_updated_url": "https://github.com/engels74/overseerr-anime/actions/runs/13337510180",
     "latest": false,
     "tags": [
       "nightly",
       "nightly-7e91a5655611a0027d9d0c68218f8287f1838930",
-      "nightly-de7d726"
+      "nightly-9784821"
     ]
   },
   "release": {
