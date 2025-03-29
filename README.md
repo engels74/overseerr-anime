@@ -25,57 +25,62 @@ For more information about the Docker image itself, you can visit [engels74.net]
 To get started with Overseerr (with Anime Instance Support) using Docker, follow these steps:
 
 1. **Use this Docker Compose example**
-    ```yaml
-    services:
-      overseerr-anime:
-        container_name: overseerr-anime
-        image: ghcr.io/engels74/overseerr-anime
-        ports:
-          - "5055:5055"
-        environment:
-          - PUID=1000
-          - PGID=1000
-          - UMASK=002
-          - TZ=Etc/UTC
-          - WEBUI_PORTS=5055/tcp,5055/udp
-        volumes:
-          - /<host_folder_config>:/config
-    ```
+
+   ```yaml
+   services:
+     overseerr-anime:
+       container_name: overseerr-anime
+       image: ghcr.io/engels74/overseerr-anime
+       ports:
+         - "5055:5055"
+       environment:
+         - PUID=1000
+         - PGID=1000
+         - UMASK=002
+         - TZ=Etc/UTC
+         - WEBUI_PORTS=5055/tcp,5055/udp
+       volumes:
+         - /<host_folder_config>:/config
+   ```
 
    - **Tag Options**:
      - `:release` (or `:latest`): The stable version, based on the [`feature-default-anime-instance-checkbox-release`](https://github.com/engels74/overseerr-anime-source/tree/feature-default-anime-instance-checkbox-release) branch.
      - `:nightly`: The nightly version, based on the [`feature-default-anime-instance-checkbox-nightly`](https://github.com/engels74/overseerr-anime-source/tree/feature-default-anime-instance-checkbox-nightly) branch.
 
 2. **Run the Docker container using `docker compose`:**
-    ```sh
-    docker compose -f /choose/path/to/docker-compose.overseerr-anime.yml up -d
-    ```
+   ```sh
+   docker compose -f /choose/path/to/docker-compose.overseerr-anime.yml up -d
+   ```
 
 ## 🌿 Branches and Workflows
 
 This repository maintains two main branches, each with its own purpose and automated workflows. Both branches include the changes from the original [Pull Request](https://github.com/sct/overseerr/pull/3664), but they differ in how they incorporate updates from their respective upstreams.
 
 ### Branches
-1. **`feature-default-anime-instance-checkbox-release` (`:release`)**  
-   - **Source**: This branch is rebased daily from the `thempc/overseerr` repository's `feature-default-anime-instance-checkbox` branch, which is the source of the original pull request.  
-   - **Purpose**: It provides a stable version of the changes from the pull request, directly from the PR author's repository.  
+
+1. **`feature-default-anime-instance-checkbox-release` (`:release`)**
+
+   - **Source**: This branch is rebased daily from the `sct/overseerr` repository's `master` branch, which uses the latest Overseerr release and rebases thempc's changes onto that.
+   - **Purpose**: It provides a stable version of Overseerr with the anime instance support changes applied to the official release branch.
    - **Docker Tag**: `:release` (also aliased as `:latest`).
 
-2. **`feature-default-anime-instance-checkbox-nightly` (`:nightly`)**  
-   - **Source**: This branch is rebased daily from the `sct/overseerr` repository's `develop` branch (the original Overseerr repository) and then merges or rebases the changes from the `thempc/overseerr` pull request.  
-   - **Purpose**: It ensures that the changes from the pull request are always updated with the latest developments from the original Overseerr repository, making it ideal for testing the latest features.  
+2. **`feature-default-anime-instance-checkbox-nightly` (`:nightly`)**
+   - **Source**: This branch is rebased daily from the `sct/overseerr` repository's `develop` branch (the original Overseerr repository) and then merges or rebases the changes from the `thempc/overseerr` pull request.
+   - **Purpose**: It ensures that the changes from the pull request are always updated with the latest developments from the original Overseerr repository, making it ideal for testing the latest features.
    - **Docker Tag**: `:nightly`.
 
 ### Workflows
+
 Two GitHub Actions workflows automate the rebasing process:
 
-1. **`rebase-stable.yml`**  
-   - **Purpose**: Automatically rebases the `feature-default-anime-instance-checkbox-release` branch from `thempc/overseerr`'s `feature-default-anime-instance-checkbox` branch.  
-   - **Schedule**: Runs daily at midnight UTC.  
+1. **`rebase-stable.yml`**
 
-2. **`rebase-nightly.yml`**  
-   - **Purpose**: Automatically rebases the `feature-default-anime-instance-checkbox-nightly` branch from `sct/overseerr`'s `develop` branch and incorporates the changes from the `thempc/overseerr` pull request.  
-   - **Schedule**: Runs daily at midnight UTC.  
+   - **Purpose**: Automatically rebases the `feature-default-anime-instance-checkbox-release` branch from `sct/overseerr`'s `master` branch and applies the anime instance support changes.
+   - **Schedule**: Runs daily at midnight UTC.
+
+2. **`rebase-nightly.yml`**
+   - **Purpose**: Automatically rebases the `feature-default-anime-instance-checkbox-nightly` branch from `sct/overseerr`'s `develop` branch and incorporates the changes from the `thempc/overseerr` pull request.
+   - **Schedule**: Runs daily at midnight UTC.
 
 These workflows ensure that both branches stay up-to-date with their respective upstreams while maintaining the changes from the original pull request.
 
@@ -92,6 +97,7 @@ If you need assistance, please write in the active pull request. It can be [foun
 ## 🌟 Show your support
 
 You can show your support by:
+
 - Giving us a star on Docker Hub or GitHub
 - Making a [donation](https://hotio.dev/donate) to hotio, as he's the genius behind the Docker images
 
