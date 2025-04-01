@@ -14,13 +14,13 @@
   "release": {
     "description": "Releases",
     "hide": false,
-    "last_updated": "2025-03-29T15:03:11.000Z",
-    "last_updated_url": "https://github.com/engels74/overseerr-anime/actions/runs/14146310690",
+    "last_updated": "2025-04-01T19:13:40.000Z",
+    "last_updated_url": "https://github.com/engels74/overseerr-anime/actions/runs/14203978026",
     "latest": true,
     "tags": [
       "release",
       "release-1.34.0-anime",
-      "release-2a4d75a"
+      "release-62a13eb"
     ]
   }
 }
