@@ -14,9 +14,9 @@
 
 ## 📖 Documentation
 
-All the documentation for the "Oveerseerr (Anime Support)" is located at the active [Pull Request](https://github.com/sct/overseerr/pull/3664) page.
+All documentation for "Overseerr (Anime Support)" is located at the active [Pull Request](https://github.com/sct/overseerr/pull/3664) page.
 
-For more information about the Docker image itself, you can visit [engels74.net](https://engels74.net/containers/overseerr-anime).
+For more information about the Docker image, visit [engels74.net](https://engels74.net/containers/overseerr-anime).
 
 ## 🐋 Docker Image
 
@@ -24,7 +24,7 @@ For more information about the Docker image itself, you can visit [engels74.net]
 
 To get started with Overseerr (with Anime Instance Support) using Docker, follow these steps:
 
-1. **Use this Docker Compose example**
+1. **Use this Docker Compose example:**
 
    ```yaml
    services:
@@ -43,56 +43,35 @@ To get started with Overseerr (with Anime Instance Support) using Docker, follow
          - /<host_folder_config>:/config
    ```
 
-   - **Tag Options**:
-     - `:release` (or `:latest`): The stable version, based on the [`feature-default-anime-instance-checkbox-release`](https://github.com/engels74/overseerr-anime-source/tree/feature-default-anime-instance-checkbox-release) branch.
+   - **Tag Options**:  
+     Use `:release` or `:latest` for the stable version, which is based on the [`feature-default-anime-instance-checkbox-release`](https://github.com/engels74/overseerr-anime-source/tree/feature-default-anime-instance-checkbox-release) branch.
 
 2. **Run the Docker container using `docker compose`:**
+
    ```sh
    docker compose -f /choose/path/to/docker-compose.overseerr-anime.yml up -d
    ```
 
-## 🌿 Branches and Workflows
+## 🌿 Branch and Workflow
 
-This repository maintains two main branches, each with its own purpose and automated workflows. Both branches include the changes from the original [Pull Request](https://github.com/sct/overseerr/pull/3664), but they differ in how they incorporate updates from their respective upstreams.
+This repository now maintains a single main branch:
 
-### Branches
+- **`feature-default-anime-instance-checkbox-release`** (`:release` / `:latest`):  
+  This branch is rebased daily from the `sct/overseerr` repository's `master` branch, applying the anime instance support changes to the latest official release.
 
-1. **`feature-default-anime-instance-checkbox-release` (`:release`)**
-
-   - **Source**: This branch is rebased daily from the `sct/overseerr` repository's `master` branch, which uses the latest Overseerr release and rebases thempc's changes onto that.
-   - **Purpose**: It provides a stable version of Overseerr with the anime instance support changes applied to the official release branch.
-   - **Docker Tag**: `:release` (also aliased as `:latest`).
-
-### Workflows
-
-Two GitHub Actions workflows automate the rebasing process:
-
-1. **`rebase-stable.yml`**
-
-   - **Purpose**: Automatically rebases the `feature-default-anime-instance-checkbox-release` branch from `sct/overseerr`'s `master` branch and applies the anime instance support changes.
-   - **Schedule**: Runs daily at midnight UTC.
-
-2. **`rebase-nightly.yml`**
-   - **Purpose**: Automatically rebases the `feature-default-anime-instance-checkbox-nightly` branch from `sct/overseerr`'s `develop` branch and incorporates the changes from the `thempc/overseerr` pull request.
-   - **Schedule**: Runs daily at midnight UTC.
-
-These workflows ensure that both branches stay up-to-date with their respective upstreams while maintaining the changes from the original pull request.
+A GitHub Actions workflow (`rebase-stable.yml`) automates the rebasing process, ensuring the branch stays up-to-date with upstream changes while maintaining the anime support features.
 
 ## 🆘 Support
 
-If you need assistance, please write in the active pull request. It can be [found here](https://github.com/sct/overseerr/pull/3664).
+If you need assistance, please write in the active pull request, which can be [found here](https://github.com/sct/overseerr/pull/3664).
 
 ## 💻 Source Code
 
-- **Project Source Code**: The source code for the "Overseerr (Anime Support)" project is hosted at [engels74/overseerr-anime-source](https://github.com/engels74/overseerr-anime-source).
-
-- **Docker Image Source**: The source files for building the Docker image are hosted at [engels74/overseerr-anime](https://github.com/engels74/overseerr-anime). If you can't find what you're looking for in the `master` branch, check other branches.
+- **Project Source Code**: [engels74/overseerr-anime-source](https://github.com/engels74/overseerr-anime-source)
+- **Docker Image Source**: [engels74/overseerr-anime](https://github.com/engels74/overseerr-anime)
 
 ## 🌟 Show your support
 
-You can show your support by:
-
-- Giving us a star on Docker Hub or GitHub
-- Making a [donation](https://hotio.dev/donate) to hotio, as he's the genius behind the Docker images
+You can show your support by giving us a star on Docker Hub or GitHub, or by making a [donation](https://hotio.dev/donate) to hotio, who is the genius behind the Docker images.
 
 Your support is greatly appreciated!
