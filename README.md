@@ -45,7 +45,6 @@ To get started with Overseerr (with Anime Instance Support) using Docker, follow
 
    - **Tag Options**:
      - `:release` (or `:latest`): The stable version, based on the [`feature-default-anime-instance-checkbox-release`](https://github.com/engels74/overseerr-anime-source/tree/feature-default-anime-instance-checkbox-release) branch.
-     - `:nightly`: The nightly version, based on the [`feature-default-anime-instance-checkbox-nightly`](https://github.com/engels74/overseerr-anime-source/tree/feature-default-anime-instance-checkbox-nightly) branch.
 
 2. **Run the Docker container using `docker compose`:**
    ```sh
@@ -63,11 +62,6 @@ This repository maintains two main branches, each with its own purpose and autom
    - **Source**: This branch is rebased daily from the `sct/overseerr` repository's `master` branch, which uses the latest Overseerr release and rebases thempc's changes onto that.
    - **Purpose**: It provides a stable version of Overseerr with the anime instance support changes applied to the official release branch.
    - **Docker Tag**: `:release` (also aliased as `:latest`).
-
-2. **`feature-default-anime-instance-checkbox-nightly` (`:nightly`)**
-   - **Source**: This branch is rebased daily from the `sct/overseerr` repository's `develop` branch (the original Overseerr repository) and then merges or rebases the changes from the `thempc/overseerr` pull request.
-   - **Purpose**: It ensures that the changes from the pull request are always updated with the latest developments from the original Overseerr repository, making it ideal for testing the latest features.
-   - **Docker Tag**: `:nightly`.
 
 ### Workflows
 
