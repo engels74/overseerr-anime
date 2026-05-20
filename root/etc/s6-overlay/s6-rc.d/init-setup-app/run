@@ -10,6 +10,21 @@ umask "${UMASK}"
 
 echo "
 ----------------------------------------------------------------------
+DEPRECATION WARNING
+----------------------------------------------------------------------
+overseerr-anime is deprecated and will not receive further updates.
+This image is based on an old Overseerr anime-instance PR and may
+contain unfixed CVEs inherited from the abandoned dependency stack.
+Known example: CVE-2026-40175 in axios, fixed upstream in Seerr v3.1.1 or later.
+
+Migrate to Seerr where possible: https://github.com/seerr-team/seerr
+Closest workaround today: https://github.com/varthe/Redirecterr
+Potential built-in routing rules: https://github.com/seerr-team/seerr/pull/2452
+----------------------------------------------------------------------
+"
+
+echo "
+----------------------------------------------------------------------
 ENVIRONMENT APP
 ----------------------------------------------------------------------
 WEBUI_PORTS=${WEBUI_PORTS}

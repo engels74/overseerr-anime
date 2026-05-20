@@ -6,4 +6,16 @@ umask "${UMASK}"
 HOME="${APP_DIR}" && export HOME
 
 cd "${APP_DIR}" || exit 1
+
+echo "
+----------------------------------------------------------------------
+DEPRECATION WARNING
+----------------------------------------------------------------------
+overseerr-anime is deprecated and will not receive further updates.
+This image may contain unfixed CVEs. Please migrate to Seerr where
+possible: https://github.com/seerr-team/seerr
+Known example: CVE-2026-40175 in axios, fixed upstream in Seerr v3.1.1 or later.
+----------------------------------------------------------------------
+"
+
 exec s6-setuidgid hotio yarn start
